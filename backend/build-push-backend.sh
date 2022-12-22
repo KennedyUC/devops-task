@@ -1,5 +1,4 @@
 #!/bin/sh
-set -euo pipefail
 
 function log {
   echo "$@"
@@ -13,7 +12,7 @@ echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER_NAME --password-stdin
 # Docker build image
 log '✅ Docker building $IMAGE_NAME image for $IMAGE_TAG version...'
 
-docker build -t $BACKEND_IMAGE_NAME:$BACKEND_IMAGE_TAG .
+docker build -t $BACKEND_IMAGE_NAME:$BACKEND_IMAGE_TAG ./backend
 
 # Docker tag image
 log '✅ Tagging image for deployment to Docker...'
