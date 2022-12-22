@@ -1,0 +1,26 @@
+app:
+  name: "test-app"
+
+frontend:
+  replicas: "1"
+  image: "kennedyuche/frontend-web"
+  tag: "v1"
+  resources:
+    requests:
+      memory: "50Mi"
+      cpu: "20m"
+    limits:
+      memory: ""
+      cpu: ""
+
+backend:
+  replicas: "2"
+  image: "kennedyuche/backend-api"
+  tag: "v1"
+  resources:
+    requests:
+      memory: "50Mi"
+      cpu: "20m"
+    limits:
+      memory: ""
+      cpu: ""

@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app.name }}-frontend
+  namespace: {{ .Values.app.name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.app.name }}-frontend
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app.name }}-frontend
+    spec:
+      containers:
+      - name: {{ .Values.app.name }}-frontend
+        image: {{ .Values.frontend.image }}:{{ .Values.frontend.tag }}
+        imagePullPolicy: Always
+        resources:
+          {{- if .Values.frontend.resources.requests }}
+          requests:
+            memory: {{ .Values.frontend.resources.requests.memory | default "100Mi" | quote }}
+            cpu: {{ .Values.frontend.resources.requests.cpu | default "10m" | quote }}
+          {{- else }}
+          requests:
+            memory: "100Mi"
+            cpu: "10m"
+          {{- end }}
+
+          {{- if .Values.frontend.resources.limits }}
+          limits:
+            memory: {{ .Values.frontend.resources.limits.memory | default "2048Mi" | quote }}
+            cpu: {{ .Values.frontend.resources.limits.cpu | default "500m" | quote }}
+          {{- else }}
+          limits:
+            memory: "2048Mi"
+            cpu: "500m"
+          {{- end }}
+        ports:
+        - containerPort: 3000
