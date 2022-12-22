@@ -1,0 +1,12 @@
+.wrapper {
+  margin: auto;
+  width: 80%;
+}
+
+.mainHeading {
+  text-align: center;
+  color: #091540;
+  margin-top: 5rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+}

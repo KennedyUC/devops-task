@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root{
+    --dark-blue-color: #091540;
+    --icons-color: #F05D23;
+    --default-color: #121212;
+    --primary-color600: #091540;
+    --card-text-color: #ffff;
+}
+
+.help_center{
+    margin-top: 3rem;
+    padding: 0rem 2.24rem;
+    text-align: center;
+    color: var(--card-text-color);
+    font-family: poppins;
+}
+
+.headings{
+    color: var(--dark-blue-color);
+    font-size: 2.24rem;
+    margin-bottom: 0.96rem;
+}
+.search_container{
+    width: 100%;
+    margin-top: 2rem;
+}
+.card > p{
+    color: var(--card-text-color);
+    margin-bottom: 1.6rem;
+}
+.paragraphs{
+    color: var(--default-color);
+    font-size: 1.6rem;
+}
+.inputs{
+    color: var(--default-color);
+    height: 3.68rem;
+    width: 100%;
+    padding-left: 1.6rem;
+}
+.searchIcon{
+    color: var(--default-color);
+    position: relative;
+    top: 1rem;
+    justify-content: flex-start;
+    left: 0.48rem;
+    font-size: 2rem;
+}
+.search_div{
+    display: flex;
+    margin-bottom: 4rem;
+    border: 0.08rem solid var(--primary-color600);
+    border-radius: 0.4rem;
+    top: auto;
+    width: 100%;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    grid-gap: 1.6rem;
+    margin-top: 4rem;
+}
+.card{
+    background-color: var(--primary-color600);
+    border-radius: 1.12rem;
+    padding: 2.4rem;
+}
+.category_div{
+    margin-top: 3.2rem;
+}
+.icons{
+    color: var(--icons-color);
+    margin-bottom: 1.6rem;
+    height: 6rem;
+    width: 6rem;
+}
+.category_div > h5{
+    margin-bottom: 1.6rem;
+}
+.question_div{
+    margin-top: 4.8rem;
+}
+
+.forms{
+    margin-top: 3.2rem;
+    margin-bottom: 3rem;
+    display: grid;
+    gap: 3.2rem;
+    grid-template-columns: 1fr;
+}
+.forms_div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+.forms_div > input{
+    border: 0.08rem solid var(--primary-color600);
+    height: 3.68rem;
+    padding: 1.6rem;
+    border-radius: 0.8rem;
+    color: var(--default-color);
+}
+.forms > textarea{
+    padding: 1.6rem;
+    border: 0.08rem solid var(--primary-color600);
+    margin-bottom: 3.2rem;
+}
+.submit{
+    background-color: var(--primary-color600);
+    height: 4rem;
+    width: 12.96rem;
+    justify-self: center;
+    border-radius: 0.8rem;
+}
+
+@media((min-width: 481px) and  (max-width: 768px)){
+    .cards{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+     }
+    .card{
+        width: 32rem;
+        max-width: 35.2rem;
+        height: 19.2rem;
+    }
+    .search_div {
+        width: 60%;
+    }
+    .submit {
+        width: 100%;
+    }
+}
+@media((min-width: 769px) and  (max-width: 1024px)){
+    .help_center{
+        padding: 0rem 3.2rem;
+    }
+    .help_center > div > h3{
+        font-size: 2.8rem;
+    }
+    .category_div > h5{
+        font-size: 2.24rem;
+    }
+    .cards{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .icons{
+        margin-bottom: 0;
+    }
+    .card{
+        width: 32rem;
+        max-width: 35.2rem;
+        height: 19.2rem;
+    }
+    .search_div{
+        width: 60%;
+    }
+    .forms_div{
+        flex-direction: row;
+    }
+    .forms_div > input{
+        width: 100%;
+    }
+    .submit{
+        width: 100%;
+    }
+}
+@media((min-width: 1025px) and  (max-width: 1200px)){
+    .help_center{
+        padding: 0rem 9.6rem;
+    }
+    .cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 32rem;
+        max-width: 35.2rem;
+        height: 19.2rem;
+    }
+    
+    .forms_div{
+        flex-direction: row;
+    }
+    .forms_div > input{
+        width: 100%;
+    }
+    .submit{
+        width: 100%;
+    }
+}
+@media(min-width: 1201px){
+    .help_center{
+        padding: 0rem 9.6rem;
+    }
+    .help_center > div > h3{
+        font-size: 4.8rem;
+    }
+    .help_center > div > p{
+        font-size: 2.8rem;
+        font-weight: 400;
+    }
+    .category_div > h5{
+        font-size: 3.22rem;
+    }
+    .search_div{
+        width: 60%;
+    }
+    .card > h6{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .card > p{
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    .forms_div{
+        flex-direction: row;
+    }
+    .forms_div > input{
+        width: 100%;
+    }
+    .question_div > h5{
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
+    .submit{
+        width: 100%;
+        font-size: 2.08rem;
+    }
+}

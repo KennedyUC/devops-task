@@ -1,0 +1,164 @@
+* {
+  font-family: "Poppins";
+  font-style: normal;
+}
+.values {
+  width: 100%;
+  padding-left: 8%;
+  padding-right: 4%;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  display: flex;
+
+  gap: 5%;
+  flex-direction: column;
+}
+.img {
+  width: 30%;
+  height: 336px;
+}
+
+.p {
+  max-width: 640px;
+  /* height: 46.55px; */
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  color: #091540;
+  margin-top: 20.8px;
+}
+
+.connect > h2 {
+  width: 273px;
+  height: 38px;
+  left: 280px;
+  top: 1068.99px;
+  margin: 10px auto;
+  margin-top: 75px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 38px;
+  color: #091540;
+}
+
+.coreValues {
+  display: flex;
+  gap: 84px;
+}
+.h2 {
+  font-weight: 600;
+  font-size: 36.8px;
+  line-height: 44.8px;
+  color: #091540;
+}
+
+.connect > div {
+  display: flex;
+  margin: 10px auto;
+  justify-content: space-between;
+  padding: 8.95734px 13.6493px;
+  width: 474.31px;
+  height: 46.07px;
+  border: 0.85308px solid #091540;
+  border-radius: 6.82464px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8.53094px;
+  gap: 8.53px;
+  width: 86.16px;
+  height: 28.15px;
+  background: #091540;
+  border-radius: 6.82475px;
+  color: var(--white);
+}
+
+.email {
+  width: 352.32px;
+  height: 20px;
+  font-weight: 275;
+  font-size: 11.9431px;
+  line-height: 20px;
+  color: var(--bluish-grey);
+}
+
+.ul > li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.ul > li > span {
+  margin-top: 10px;
+  width: 46.55px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 15px;
+  color: #091540;
+}
+@media screen and (max-width: 840px) {
+  .vision {
+    margin-bottom: 0;
+    height: 400px;
+  }
+  .img {
+    float: right;
+    width: 40%;
+    margin-left: 20px;
+    height: 320px;
+  }
+  .h2 {
+    font-size: 22.9895px;
+    line-height: 28px;
+  }
+  .p {
+    font-weight: 400;
+    font-size: 12.3453px;
+    line-height: 15px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .values {
+    width: 100%;
+    padding: 10% 3%;
+    gap: 1px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .h2 {
+    font-weight: 600;
+    font-size: 19.2px;
+    line-height: 28.8px;
+    color: #091540;
+  }
+  .p {
+    font-size: 12px;
+    line-height: 18px;
+    /* or 150% */
+  }
+  .ul > li > span {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .img {
+    width: 40%;
+    height: 150px;
+  }
+  .connect > div {
+    width: 90%;
+    height: 40px;
+    padding: 6px;
+    align-items: center;
+  }
+
+  .coreValues > div {
+    /* border: solid 2px #091540; */
+    margin-left: -15%;
+  }
+  .p {
+    margin-top: 10px;
+  }
+}

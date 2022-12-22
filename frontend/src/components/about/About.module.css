@@ -1,0 +1,309 @@
+/*General styling foor Aboutmain component*/
+
+.wrapper {
+  margin: auto;
+  width: 80%;
+}
+
+.mainHeading {
+  text-align: center;
+  color: #091540;
+  margin-top: 5rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.container {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.imgContainer,
+.textContainer {
+  width: 95%;
+  min-width: 280px;
+}
+
+.textCont {
+  border: 2px solid green;
+  color: #091540;
+  margin-bottom: 5rem;
+}
+
+.imgContainer {
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgContainer img {
+  height: 80%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .imgContainer {
+    width: 55%;
+  }
+
+  .textContainer {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mainHeading {
+    font-size: 4rem;
+  }
+}
+
+.h2Main {
+  font-weight: 500;
+  font-size: 4rem;
+}
+
+.para {
+  color: #091540;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.imgCont {
+  /* margin-right: -100px; */
+  width: 60%;
+  /* height: 66rem; */
+  background-image: url(./main.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .textMain {
+  width: 40%;
+} */
+
+/*General styling foor Aboutbottom component*/
+.bottCont {
+  background-color: #facdbb;
+}
+
+.bottom {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  gap: 150px;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.bottomImg {
+  background-image: url(./bottompic.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 40rem;
+  width: 50%;
+}
+.bottText {
+  color: #091540;
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin-bottom: 10rem;
+}
+.signupBtn {
+  background-color: #091540;
+  border-radius: 8px;
+  width: 55%;
+  height: 5.6rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.textDiv {
+  width: 50%;
+}
+
+/* @media only screen and (max-width: 768px) {
+   Tablet styling for Abouttop component
+  .h1 {
+    font-weight: 600;
+    font-size: 2.8rem;
+  }
+
+  .hi {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  Tablet styling for Aboutmain component
+  .mainCont {
+    margin: auto;
+    width: 80%;
+  }
+  .mainHeading {
+    font-size: 2.8rem;
+  }
+
+  .main {
+    display: flex;
+    gap: 5rem;
+    margin-top: 5rem;
+  }
+
+  .imgCont {
+    margin-bottom: -2rem;
+    width: 50%;
+    height: 30rem;
+    background-size: 100%;
+  }
+
+  .h2Main {
+    font-size: 2.8rem;
+  }
+
+  .para {
+    color: #091540;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: -2rem;
+  }
+
+  .textMain {
+    width: 50%;
+  }
+
+  Tablet styling foor Aboutbottom component
+  .bottCont {
+    background-color: #fde7de;
+  }
+  .bottom {
+    flex-direction: column;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .bottomImg {
+    background-size: 100%;
+    height: 40rem;
+    width: 100%;
+  }
+  .textDiv {
+    width: 100%;
+    display: flex;
+  }
+  .bottText {
+    width: 70%;
+    margin-bottom: 6rem;
+    margin-top: -5rem;
+  }
+  .signupBtn {
+    margin-top: 10rem;
+    width: 30%;
+    height: 5.6rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+} */
+
+/* @media only screen and (max-width: 600px) {
+  Mobile styling for Abouttop component
+  .h1 {
+    font-weight: 600;
+    font-size: 4.8rem;
+  }
+
+  .hi {
+    font-weight: 500;
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  Mobile styling for Aboutmain component
+
+  .mainHeading {
+    font-size: 2.8rem;
+  }
+
+  .main {
+    flex-direction: column-reverse;
+
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .imgCont {
+    margin-bottom: -2rem;
+    width: 100%;
+    height: 30rem;
+    background-size: 100%;
+  }
+
+  .h2Main {
+    font-size: 2.8rem;
+  }
+
+  .para {
+    color: #091540;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: -2rem;
+  }
+
+  .textMain {
+    width: 100%;
+  }
+
+  Mobile styling foor Aboutbottom component
+  .bottCont {
+    background-color: #fde7de;
+  }
+  .bottom {
+    flex-direction: column;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+  .bottomImg {
+    background-size: 100%;
+    height: 40rem;
+    width: 100%;
+  }
+  .textDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .bottText {
+    margin-bottom: 6rem;
+    margin-top: -5rem;
+  }
+  .signupBtn {
+    background-color: #091540;
+    border-radius: 8px;
+    width: 60%;
+    height: 5.6rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+} */
