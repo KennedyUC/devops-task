@@ -31,17 +31,17 @@ app.add_middleware(
 )
 
 
-@app.get("/", tags=["root"])
+@app.get("/api", tags=["root"])
 async def read_root() -> dict:
     return {"message": "Welcome to your todo list."}
 
 
-@app.get("/todo", tags=["todos"])
+@app.get("/api/todo", tags=["todos"])
 async def get_todos() -> dict:
     return { "data": todos }
 
 
-@app.post("/todo", tags=["todos"])
+@app.post("/api/todo", tags=["todos"])
 async def add_todo(todo: dict) -> dict:
     todos.append(todo)
     return {
@@ -49,7 +49,7 @@ async def add_todo(todo: dict) -> dict:
     }
 
 
-@app.put("/todo/{id}", tags=["todos"])
+@app.put("/api/todo/{id}", tags=["todos"])
 async def update_todo(id: int, body: dict) -> dict:
     for todo in todos:
         if int(todo["id"]) == id:
@@ -63,7 +63,7 @@ async def update_todo(id: int, body: dict) -> dict:
     }
 
 
-@app.delete("/todo/{id}", tags=["todos"])
+@app.delete("/api/todo/{id}", tags=["todos"])
 async def delete_todo(id: int) -> dict:
     for todo in todos:
         if int(todo["id"]) == id:

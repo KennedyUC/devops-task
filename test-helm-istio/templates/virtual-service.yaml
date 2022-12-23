@@ -1,0 +1,29 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: {{ .Values.app.name }}
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - {{ .Values.app.name }}-gateway
+  http:
+    - match:
+        - uri:
+            prefix: '/api'
+      route:
+        - destination:
+            host: {{ .Values.app.name }}-backend
+            port:
+              number: 8000
+    - route:
+        - destination:
+            host: {{ .Values.app.name }}-frontend
+            port:
+              number: 3000
+  # http:
+  # - route:
+  #   - destination:
+  #       host: {{ .Values.app.name }}-frontend
+  #       port:
+  #         number: 3000
