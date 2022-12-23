@@ -4,12 +4,11 @@ WORKDIR /app/frontend
 
 COPY package.json ./
 
-RUN npm i && \
-    npm install husky && \
+RUN npm install && \
     npm audit fix
 
 COPY . .
 
 EXPOSE 3000
 
-CMD [ "npm", "start"]
+CMD [ "npm", "run", "start"]
