@@ -10,7 +10,9 @@ spec:
   http:
     - match:
         - uri:
-            prefix: '/api'
+            prefix: /api
+        - uri:
+            prefix: /docs
       route:
         - destination:
             host: {{ .Values.app.name }}-backend
@@ -21,9 +23,3 @@ spec:
             host: {{ .Values.app.name }}-frontend
             port:
               number: 3000
-  # http:
-  # - route:
-  #   - destination:
-  #       host: {{ .Values.app.name }}-frontend
-  #       port:
-  #         number: 3000
