@@ -1,4 +1,4 @@
-# Simple TODO List App with React and FAstAPI  
+# Simple TODO List App with React and FastAPI  
 
 1. Fork/Clone
 
