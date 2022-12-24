@@ -1,14 +1,8 @@
-# Developing a Single Page App with FastAPI and React
-
-### Want to learn how to build this?
-
-Check out the [post](https://testdriven.io/blog/fastapi-react/).
-
-## Want to use this project?
+# Simple TODO List App with React and FAstAPI  
 
 1. Fork/Clone
 
-1. Run the server-side FastAPI app in one terminal window:
+2. Run the server-side FastAPI app in one terminal window:
 
     ```sh
     $ cd backend
@@ -20,12 +14,12 @@ Check out the [post](https://testdriven.io/blog/fastapi-react/).
 
     Navigate to [http://localhost:8000](http://localhost:8000)
 
-1. Run the client-side React app in a different terminal window:
+3. Run the client-side React app in a different terminal window:
 
     ```sh
     $ cd frontend
     $ npm install
-    $ npm run start
+    $ npm start
     ```
 
     Navigate to [http://localhost:3000](http://localhost:3000)
