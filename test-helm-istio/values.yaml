@@ -4,7 +4,7 @@ app:
 frontend:
   replicas: "1"
   image: "kennedyuche/frontend-web"
-  tag: "v1"
+  tag: "latest"
   resources:
     requests:
       memory: "50Mi"
@@ -14,9 +14,9 @@ frontend:
       cpu: ""
 
 backend:
-  replicas: "2"
+  replicas: "1"
   image: "kennedyuche/backend-api"
-  tag: "v1"
+  tag: "latest"
   resources:
     requests:
       memory: "50Mi"
