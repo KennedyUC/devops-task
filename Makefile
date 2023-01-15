@@ -1,3 +1,20 @@
+ENV :=dev
+SHELL := /bin/bash
+
+CWD:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+
+ifeq ($(ENV), dev)
+	SKAFFOLD_DEFAULT_REPO := "kennedyuche"
+endif
+
+DOCKER_PASSWORD := "MSP4UcheKC@1470"
+
+docker_login:
+	echo $(DOCKER_PASSWORD) | docker login -u $(SKAFFOLD_DEFAULT_REPO) --password-stdin
+
+skaffold-build:
+	skaffold build  --platform linux/amd64 --default-repo="$(SKAFFOLD_DEFAULT_REPO).azurecr.io" --push
+
 build_frontend:
 	bash ./frontend/build-push-frontend.sh
 
