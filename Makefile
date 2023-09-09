@@ -13,7 +13,7 @@ docker_login:
 	echo $(DOCKER_PASSWORD) | docker login -u $(SKAFFOLD_DEFAULT_REPO) --password-stdin
 
 skaffold-build:
-	skaffold build  --platform linux/amd64 --default-repo="$(SKAFFOLD_DEFAULT_REPO).azurecr.io" --push
+	skaffold build  --platform linux/amd64 --default-repo="$(SKAFFOLD_DEFAULT_REPO)" --push
 
 build_frontend:
 	bash ./frontend/build-push-frontend.sh
