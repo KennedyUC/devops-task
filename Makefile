@@ -4,10 +4,10 @@ SHELL := /bin/bash
 CWD:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 ifeq ($(ENV), dev)
-	SKAFFOLD_DEFAULT_REPO := "kennedyuche"
+	SKAFFOLD_DEFAULT_REPO := ""
 endif
 
-DOCKER_PASSWORD := "MSP4UcheKC@1470"
+DOCKER_PASSWORD := ""
 
 docker_login:
 	echo $(DOCKER_PASSWORD) | docker login -u $(SKAFFOLD_DEFAULT_REPO) --password-stdin
